@@ -1,13 +1,12 @@
-import { Controller, Get, Post, Body } from '@nestjs/common';
+import { Controller, Get, Post, Body, Put } from '@nestjs/common';
 
 interface Todo {
   text: string;
-  isCompleted: boolean;
 }
 
 @Controller('api/todos')
 export class TodosController {
-  todos: Todo[] = [{ text: 'sample', isCompleted: false }];
+  todos: Todo[] = [{ text: 'sample' }];
 
   @Get()
   getTodos(): Todo[] {
