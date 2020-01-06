@@ -5,8 +5,8 @@ const todosSlice = createSlice({
   name: 'todos',
   initialState: [] as Todo[],
   reducers: {
-    saveTodoList(state, action: PayloadAction<{ todoList: Todo[] }>) {
-      const { todoList } = action.payload;
+    saveTodoList(_, action: PayloadAction<Todo[]>) {
+      const todoList = action.payload;
       return todoList;
     },
   },
